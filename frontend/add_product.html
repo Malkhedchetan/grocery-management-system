@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-overlay"></div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h1>➕ Add New Product</h1>
+</div>
+
+<!-- Main container -->
+<div class="add-container fade-in">
+
+    <div class="add-card">
+
+        <h2>Add Product</h2>
+        <p class="small-text">Fill the details to add a new product</p>
+
+        <label>Name</label>
+        <input type="text" id="name" class="input-box">
+
+        <label>Unit of Measurement</label>
+        <select id="uom" class="input-box"></select>
+
+        <label>Price per Unit</label>
+        <input type="number" id="price" class="input-box">
+
+        <button class="place-btn" onclick="insertProduct()">Add Product</button>
+
+    </div>
+</div>
+
+<script src="assets/script.js"></script>
+<script>loadUOM();</script>
+
+</body>
+</html>

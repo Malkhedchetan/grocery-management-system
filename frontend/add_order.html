@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Order</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-overlay"></div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h1>🧾 Create New Order</h1>
+</div>
+
+<!-- Main Form Container -->
+<div class="order-container fade-in">
+
+    <div class="form-card">
+
+        <h2>Create Order</h2>
+        <p class="small-text">Fill details & add items to complete customer order</p>
+
+        <label>Customer Name</label>
+        <input type="text" id="customerName" class="input-box">
+
+        <label>Select Product</label>
+        <select id="product" class="input-box"></select>
+
+        <label>Quantity</label>
+        <input type="number" id="quantity" min="1" class="input-box">
+
+        <button class="btn" onclick="addItem()">Add Item</button>
+
+        <h3 class="mt">Order Items</h3>
+
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="orderItemsTable"></tbody>
+        </table>
+
+        <h3 id="grandTotalTxt" class="grand-total">Grand Total: ₹0</h3>
+
+        <button class="place-btn" onclick="submitOrder()">Place Order</button>
+
+    </div>
+</div>
+
+<script src="assets/script.js"></script>
+<script>
+    loadProductsForOrder();
+</script>
+
+</body>
+</html>
