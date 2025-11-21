@@ -140,7 +140,7 @@ Feel free to open a pull request.
 ---
 <img width="1916" height="993" alt="Screenshot 2025-11-22 002116" src="https://github.com/user-attachments/assets/452871b8-c7d0-486e-aa79-6f0a560228c6" />
 <img width="1328" height="994" alt="Screenshot 2025-11-22 002137" src="https://github.com/user-attachments/assets/810dc8e0-be89-4663-965f-1c5180f7d5dd" />
-<img width="759" height="992" alt="Screenshot 2025-11-22 002218" src="https://github.com/user-attachments/assets/16e2f148-c54b-40bf-9e07-edeb53735a9d" />
+'''''''''''''''''''''''''''''''<img width="759" height="992" alt="Screenshot 2025-11-22 002218" src="https://github.com/user-attachments/assets/16e2f148-c54b-40bf-9e07-edeb53735a9d" />'''''''''''''''''''''''''''''''
 
 ---
 ## 👨‍💻 Author
