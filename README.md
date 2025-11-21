@@ -1,52 +1,152 @@
 
-A full-stack Grocery Management System built using **FastAPI + MySQL + HTML/CSS/JS**.  
-This project allows admins to manage products, create customer orders, and view all order details with a modern glass-UI dashboard.
+---
+
+# 🛒 Grocery Management System
+
+A complete Grocery Management System designed to manage products, customers, orders, and inventory for retail shops or supermarkets.
+Built using **Python, FastAPI, and MySQL**, the system provides a fast, scalable backend for real-world grocery operations.
 
 ---
 
 ## 🚀 Features
 
-- ✔ Add new products with UOM and price  
-- ✔ View all products in a clean table  
-- ✔ Create customer orders  
-- ✔ Add multiple items to one order  
-- ✔ Auto calculate grand total  
-- ✔ View all orders with date & time  
-- ✔ MySQL database for backend storage  
-- ✔ FastAPI backend with REST API  
-- ✔ Modern glassmorphism UI (HTML + CSS)  
+* 📦 **Product Management**
+  Add, update, delete, and view products with stock quantities.
+
+* 🧾 **Order Management**
+  Create orders, add items, calculate total amounts.
+
+* 🗄️ **Inventory Tracking**
+  Auto-update stock after each sale; prevent negative stock.
+
+* ⚡ **FastAPI Backend**
+  Clean REST APIs, easy to connect with any frontend (React, HTML, mobile app).
+
+* 🛢️ **MySQL Database**
+  Fully relational schema with proper foreign keys.
 
 ---
 
-## 🛠️ Technologies Used
+## 🧱 Database Schema
 
-**Frontend**
-- HTML  
-- CSS (Glass UI)  
-- JavaScript  
+### **Tables Used**
 
-**Backend**
-- FastAPI  
-- Python  
-- Uvicorn  
-- MySQL Connector  
+* `products`
+* `orders`
+* `order_items`
 
-**Database**
-- MySQL  
+```
+products      → Stores product details  
+orders        → Stores order information  
+order_items   → Links products inside each order  
+```
 
 ---
 
-## 📦 Installation
+## 🛠️ Tech Stack
 
-### 1️⃣ Clone the repository
+* **Python**
+* **FastAPI**
+* **MySQL**
+* **Uvicorn**
+* **SQLAlchemy**
+* **Pydantic**
 
-### 2️⃣ Install backend dependencies
+---
 
-### 3️⃣ Start FastAPI server
+## 📁 Project Structure
 
-<img width="1911" height="995" alt="Screenshot 2025-11-20 193220" src="https://github.com/user-attachments/assets/ddb493ff-d60b-4a3c-91be-ce91c61c5f1e" />
-<img width="1918" height="996" alt="Screenshot 2025-11-20 193251" src="https://github.com/user-attachments/assets/4d192b83-9aa2-40b5-bc23-2181f41558da" />
-<img width="1919" height="991" alt="Screenshot 2025-11-20 193321" src="https://github.com/user-attachments/assets/24b90f12-fbda-4520-8e84-ecfaaf2bb967" />
+```
+grocery-management/
+│
+├── app/
+│   ├── main.py
+│   ├── database.py
+│   ├── routers/
+│   │   ├── products.py
+│   │   └── orders.py
+│   ├── models/
+│   │   ├── product.py
+│   │   └── order.py
+│   └── schemas/
+│
+├── requirements.txt
+└── README.md
+```
 
+---
+
+## ▶️ How to Run
+
+### 1️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2️⃣ Create MySQL database
+
+```sql
+CREATE DATABASE grocery_db;
+```
+
+### 3️⃣ Update DB credentials in `database.py`
+
+### 4️⃣ Start the backend server
+
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+## 📌 API Endpoints
+
+### **Products**
+
+| Method | Endpoint       | Description      |
+| ------ | -------------- | ---------------- |
+| GET    | /products      | Get all products |
+| POST   | /products      | Add product      |
+| PUT    | /products/{id} | Update product   |
+| DELETE | /products/{id} | Delete product   |
+
+### **Orders**
+
+| Method | Endpoint | Description      |
+| ------ | -------- | ---------------- |
+| POST   | /orders  | Create new order |
+| GET    | /orders  | Get all orders   |
+
+---
+
+## 🧪 Example JSON: Add Product
+
+```json
+{
+  "name": "Milk",
+  "price": 45.0,
+  "stock": 20
+}
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to open a pull request.
+
+---
+
+## 👨‍💻 Author
+
+**Chetan Malkhed**
+Full-Stack & Backend Developer | Python & SQL Enthusiast
+
+🔗 GitHub: [@Malkhedchetan](https://github.com/Malkhedchetan)
+🔗 LinkedIn: *[@Chetan](https://www.linkedin.com/in/chetan-malkhed)*
+
+---
 
 
